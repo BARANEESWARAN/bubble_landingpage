@@ -1,0 +1,220 @@
+
+:root {
+  --color-primary: #b667ff;
+  --color-secondary: #3a0070;
+  --color-tertiary: #f999fe;
+  --color-light: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: montserrat, sans-serif;
+  background: url("./assets/background.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+nav{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  transition: all 500ms ease;
+ 
+}
+nav .container{
+  width: 86%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  transition: all 500ms ease;
+}
+nav .container img{
+  width: 3.3rem;
+}
+nav .container #showNav,nav .container .toggleNav{
+  display: none;
+}
+
+ 
+nav .container ul{
+  display: flex;
+  gap: 4rem;
+  transition: all 500ms ease;
+}
+nav .container ul li a{
+  color: var(--color-light);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: all 400ms ease;
+}
+
+nav .container ul li a:hover{
+  color: var(--color-tertiary);
+}
+
+
+/* <--------------Header------------> */
+section {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 3rem;
+  left: 0;
+  text-align: center;
+  color: var(--color-light);
+}
+section .container h1{
+font-size: 10rem;
+text-transform: uppercase;
+
+}
+section .container h3{
+font-size: 2rem;
+text-transform: uppercase;
+margin-bottom: 3rem;
+
+}
+section .container input[type="search"]{
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+section .container input[type="search"]::placeholder{
+  color: var(--color-light);
+  letter-spacing: 0.1rem;
+}
+section .container p{
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.06rem;
+  line-height: 1.7;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+section .container a{
+  background: linear-gradient(to right,
+  var(--color-secondary),var(--color-primary)
+  
+  );
+
+  padding: 0.7rem 3rem;
+  margin: 0.4rem;
+  border-radius: 2rem;
+  position: relative;
+  color: #fff;
+  transform: all 300ms ease;
+}
+
+section .container a::before{
+  position: absolute;
+  left: -0.2rem;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border-left:5px solid var(--color-primary) ;
+  transform: all 300ms ease;
+}
+section .container a:hover{
+  background: linear-gradient(to left,
+  var(--color-secondary),var(--color-primary)
+  
+  );
+}
+
+
+
+/* ==============MEDIA QUEARY================ */
+
+@media(max-width:700px){
+
+nav .container{
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--color-secondary);
+}
+
+nav .container img{
+  margin-left: 1rem;
+}
+
+/* <-----------NAvBAR----------> */
+
+nav .container .toggleNav{
+  display: inline-block;
+  color: #fff;
+  font-size: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+nav .container .toggleNav:hover{
+color: var(--color-tertiary);
+}
+
+
+ nav .container .show{
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  transition: all 500ms ease;
+ }
+  nav .container .noshow {
+
+  display: none;
+ }
+ nav .container ul li{
+text-align: center;
+background-color: var(--color-primary);
+padding: 2rem 0;
+transition: all 500ms ease;
+cursor: pointer;
+ }
+
+ nav .container ul li:hover{
+  background-color: var(--color-tertiary);
+ 
+ }
+
+ nav .container ul li a:hover{
+  color: #fff;
+ }
+
+ /* <---------Header section--------> */
+
+ section .container h1{
+  font-size: 5.4rem;
+ }
+ section .container h3{
+font-size: 1.6rem;
+ }
+ section .container p{
+padding: 1rem;
+ }
+ section .container a{
+
+padding: 1rem 2rem;
+ }
+
+}
